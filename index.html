@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>District Gangster Wear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="interacao" href="interações.js">
+</head>
+
+<body>
+
+
+
+
+  <!-- Header global -->
+  <header class="site-header">
+    <div class="container header-bar">
+      <a href="index.html" class="brand">
+        <img src="logo.jpg.png" alt="District Gangster Wear" class="brand-logo">
+      </a>
+
+      <form class="search" action="produtos.html" method="get">
+        <input type="text" name="q" placeholder="Buscar produtos" aria-label="Buscar">
+        <button type="submit" aria-label="Buscar">
+          <span class="icon">🔍</span>
+        </button>
+      </form>
+
+      <nav class="header-actions">
+        <a href="#" aria-label="Minha conta" class="action"><span class="icon">👤</span></a>
+        <a href="carrinho.html" aria-label="Carrinho" class="action"><span class="icon">🛒</span><span
+            class="badge">2</span></a>
+      </nav>
+    </div>
+
+    <nav class="container header-nav">
+      <ul class="nav-list">
+        <li><a href="produtos.html#novidades">Novidades</a></li>
+        <li><a href="masculino.html">Masculino</a></li>
+<li><a href="feminino.html">Feminino</a></li>
+<li><a href="calcados.html">Calçados</a></li>
+
+
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero-banner">
+    <img src="banner-desktop.jpg" alt="Nova Coleção 2025" class="hero-img">
+    <div class="hero-overlay">
+
+
+      <a href="produtos.html#novidades" class="btn btn-primary">Comprar agora</a>
+    </div>
+  </section>
+
+
+
+  <!-- Produtos em destaque -->
+  <section id="destaques" class="container section">
+    <header class="section-header">
+      <h2>Destaques</h2>
+      <a class="link" href="produtos.html#novidades">Ver mais</a>
+    </header>
+
+    <div class="grid grid-products">
+      <article class="card">
+        <a href="produto-tenis-branco.html" class="card-media">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/71SRttDD+mL._AC_UL600_SR600,600_.jpg" alt="Tênis Branco Casual">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">Tênis Branco Casual</h3>
+          <p class="card-price">R$ 199,90</p>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="produto-tenis-branco.html">Ver produto</a>
+            <button class="btn btn-primary" data-add="Tênis Branco Casual">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="produto-camisa-preta.html" class="card-media">
+          <img src="https://maze.jetassets.com.br/produto/20250514175105_2080997920_D.jpg" alt="Camisa Preta Oversized">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">Camisa Preta Oversized</h3>
+          <p class="card-price">R$ 99,90</p>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="produto-camisa-preta.html">Ver produto</a>
+            <button class="btn btn-primary" data-add="Camisa Preta Oversized">Adicionar</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <a href="produto-jaqueta-jeans.html" class="card-media">
+          <img src="https://denimzero.cdn.magazord.com.br/img/2024/01/produto/42502/dz9207-1002-1.jpg" alt="Jaqueta Jeans">
+        </a>
+        <div class="card-body">
+          <h3 class="card-title">Jaqueta Jeans</h3>
+          <p class="card-price">R$ 249,90</p>
+          <div class="card-actions">
+            <a class="btn btn-outline" href="produto-jaqueta-jeans.html">Ver produto</a>
+            <button class="btn btn-primary" data-add="Jaqueta Jeans">Adicionar</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-top">
+      <div>
+        <h4>Atendimento</h4>
+        <ul>
+          <li><a href="#">Contato</a></li>
+          <li><a href="#">Trocas e devoluções</a></li>
+          <li><a href="#">Política de privacidade</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Sobre</h4>
+        <ul>
+          <li><a href="#">Nossa história</a></li>
+          <li><a href="#">Sustentabilidade</a></li>
+          <li><a href="#">Carreiras</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Receba novidades</h4>
+        <form class="newsletter" action="#" method="post">
+          <input type="email" placeholder="Seu e-mail" aria-label="Email">
+          <button class="btn btn-primary" type="submit">Assinar</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 District Gangster Wear — Todos os direitos reservados</p>
+    </div>
+  </footer>
+
+
+
+  <script src="ui.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+﻿﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <title>Carrinho — District Gangster Wear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container header-bar">
+      <a href="index.html" class="brand">
+        <img src="logo.jpg.png" alt="District Gangster Wear" class="brand-logo">
+      </a>
+      <form class="search" action="produtos.html" method="get">
+        <input type="text" name="q" placeholder="Buscar produtos" aria-label="Buscar">
+        <button type="submit" aria-label="Buscar"><span class="icon">🔍</span></button>
+      </form>
+      <nav class="header-actions">
+        <a href="#" class="action" aria-label="Minha conta"><span class="icon">👤</span></a>
+        <a href="carrinho.html" class="action" aria-label="Carrinho"><span class="icon">🛒</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <h1>Carrinho</h1>
+
+    <div class="cart">
+      <div class="cart-items">
+        <div class="cart-item">
+          <img src="https://down-br.img.susercontent.com/file/sg-11134201-7rce1-m66sv57wy8cg72" alt="Camiseta Street King">
+          <div class="item-info">
+            <h3>Camiseta Street King</h3>
+            <p>R$ 89,90</p>
+            <div class="qty">
+              <button class="qty-btn" data-dec>-</button>
+              <input type="number" value="2" min="1">
+              <button class="qty-btn" data-inc>+</button>
+            </div>
+          </div>
+          <div class="item-total"><strong>R$ 179,80</strong></div>
+          <button class="remove">Remover</button>
+        </div>
+
+        <div class="cart-item">
+          <img src="https://i.ebayimg.com/thumbs/images/g/YWkAAeSwiLtpB3hr/s-l1200.webp" alt="Boné Snapback District">
+          <div class="item-info">
+            <h3>Boné Snapback District</h3>
+            <p>R$ 65,90</p>
+            <div class="qty">
+              <button class="qty-btn" data-dec>-</button>
+              <input type="number" value="1" min="1">
+              <button class="qty-btn" data-inc>+</button>
+            </div>
+          </div>
+          <div class="item-total"><strong>R$ 65,90</strong></div>
+          <button class="remove">Remover</button>
+        </div>
+      </div>
+
+      <aside class="cart-summary">
+        <h2>Resumo</h2>
+        <dl class="summary-list">
+          <div>
+            <dt>Subtotal</dt>
+            <dd>R$ 245,70</dd>
+          </div>
+          <div>
+            <dt>Frete</dt>
+            <dd>R$ 15,90</dd>
+          </div>
+          <div class="summary-total">
+            <dt>Total</dt>
+            <dd>R$ 261,60</dd>
+          </div>
+        </dl>
+
+        <form class="checkout">
+          <h3>Seus dados</h3>
+          <label>Nome
+            <input type="text" placeholder="Seu nome" required>
+          </label>
+          <label>Email
+            <input type="email" placeholder="seu@email.com" required>
+          </label>
+          <label>Telefone
+            <input type="tel" placeholder="(61) 99999-9999" required>
+          </label>
+
+          <h3>Endereço</h3>
+          <label>CEP
+            <input type="text" placeholder="00000-000" required>
+          </label>
+          <label>Rua
+            <input type="text" placeholder="Rua Exemplo" required>
+          </label>
+          <div class="row">
+            <label>Número
+              <input type="text" placeholder="123" required>
+            </label>
+            <label>Cidade
+              <input type="text" placeholder="Brasília" required>
+            </label>
+          </div>
+
+          <h3>Pagamento</h3>
+          <div class="payment-options">
+            <label class="chip"><input type="radio" name="pay" checked> PIX</label>
+            <label class="chip"><input type="radio" name="pay"> Cartão</label>
+            <label class="chip"><input type="radio" name="pay"> Boleto</label>
+          </div>
+
+          <button class="btn btn-primary btn-full" type="submit">Finalizar pedido</button>
+        </form>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bottom">
+      <p>© 2025 District Gangster Wear</p>
+    </div>
+  </footer>
+
+  <script src="ui.js"></script>
+</body>
+
+</html>
