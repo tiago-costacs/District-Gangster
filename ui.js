@@ -1,14 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Header sombra ao rolar
-  window.addEventListener("scroll", () => {
-    const header = document.querySelector(".site-header");
-    if (window.scrollY > 20) {
-      header.classList.add("scrolled");
-    } else {
-      header.classList.remove("scrolled");
-    }
-  });
-
   // Carrinho
   document.addEventListener("click", (e) => {
     const dec = e.target.closest("[data-dec]");
@@ -25,3 +14,4 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
