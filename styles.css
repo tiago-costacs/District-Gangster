@@ -1,20 +1,18 @@
-/* ==========================
-   Variáveis globais (tema)
-========================== */
+
 :root {
-  --container: 1200px;             
-  --radius: 12px;                  
-  --radius-sm: 12px;                 
-  --shadow: 0 8px 24px rgba(0,0,0,.7); 
+  container: 1200px;             
+  radius: 12px;                  
+  radius-sm: 12px;                 
+  shadow: 0 8px 24px rgba(0,0,0,.7); 
 
-  --surface: #000;                  
-  --surface-2: #0d0d0d;             
-  --text: #fff;                     
-  --muted: #d1d1d1;                 
-  --line: #222;                     
+  surface: #000;                  
+  surface-2: #0d0d0d;             
+  text: #fff;                     
+  muted: #d1d1d1;                 
+  line: #222;                     
 
-  --brand: #e60023;                 
-  --brand-700: #c5001d;             
+  brand: #e60023;                 
+  brand-700: #c5001d;             
 }
 
 /* ==========================
