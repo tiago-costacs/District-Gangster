@@ -2,73 +2,71 @@
    Variáveis globais (tema)
 ========================== */
 :root {
-  --container: 1200px;              /* largura máxima do container principal */
-  --radius: 12px;                   /* raio padrão de bordas arredondadas */
-  --radius-sm: 12px;                 /* raio menor para elementos pequenos */
-  --shadow: 0 8px 24px rgba(0,0,0,.7); /* sombra usada em hover de cards */
+  --container: 1200px;             
+  --radius: 12px;                  
+  --radius-sm: 12px;                 
+  --shadow: 0 8px 24px rgba(0,0,0,.7); 
 
-  --surface: #000;                  /* fundo principal preto */
-  --surface-2: #0d0d0d;             /* fundo secundário preto mais claro */
-  --text: #fff;                     /* texto branco */
-  --muted: #d1d1d1;                 /* texto secundário cinza claro */
-  --line: #222;                     /* cor das linhas/bordas */
+  --surface: #000;                  
+  --surface-2: #0d0d0d;             
+  --text: #fff;                     
+  --muted: #d1d1d1;                 
+  --line: #222;                     
 
-  --brand: #e60023;                 /* vermelho principal da marca */
-  --brand-700: #c5001d;             /* vermelho escuro (hover) */
+  --brand: #e60023;                 
+  --brand-700: #c5001d;             
 }
 
 /* ==========================
    Base
 ========================== */
 body {
-  margin: 0;                        /* remove margens padrão */
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; /* fontes */
-  color: var(--text);               /* cor do texto padrão (branco) */
-  background: var(--surface);       /* fundo preto */
-    
-  line-height: 1.9;                /* altura da linha para legibilidade */
+  margin: 0;                       
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
+  color: var(--text);              
+  background: var(--surface);         
+  line-height: 1.9;                
 }
 
 img {
-  display: block;                   /* remove espaço extra abaixo da imagem */
-  max-width: 100%;                  /* impede que ultrapasse o container */
-  height: auto;                     /* mantém proporção */
+  display: block;                   
+  max-width: 100%;                  
+  height: auto;                     
 }
 
 a {
-  color: inherit;                   /* links herdam cor do texto */
-  text-decoration: none;            /* remove sublinhado */
+  color: inherit;                   
+  text-decoration: none;            
 }
 
 .container {
-  max-width: var(--container);      /* largura máxima 1200px */
-  margin: 0 auto;                   /* centraliza horizontalmente */
-  padding: 0 20px;                  /* respiro lateral */
-}
+  max-width: var(--container);      
+  margin: 0 auto;                   
+  padding: 0 20px;                  
 
 /* ==========================
    Header
 ========================== */
 .site-header {
-  position: sticky;                 /* cabeçalho gruda no topo ao rolar */
+  position: sticky;                 
   top: 0;
-  z-index: 50;                      /* fica acima dos outros elementos */
-  background: var(--surface);       /* fundo preto */
-  border-bottom: 1px solid var(--line); /* linha inferior */
+  z-index: 50;                      
+  background: var(--surface);       
+  border-bottom: 1px solid var(--line); 
 }
 
 .header-bar {
-  display: flex;                    /* layout flex horizontal */
-  align-items: center;              /* centraliza verticalmente */
-  justify-content: space-between;   /* logo à esquerda, ações à direita */
-  gap: 16px;                        /* espaçamento entre itens */
-  padding: 18px 0;                  /* respiro vertical */
+  display: flex;                    
+  align-items: center;              
+  justify-content: space-between;   
+  gap: 16px;                        
+  padding: 18px 0;                  
 }
 
 .brand-logo {
-  width: 90px;                      /* largura do logo */
-  height: 90px;                     /* altura do logo */
-  border-radius: 55px;              /* cantos arredondados */
+  width: 90px;                      
+  height: 90px;                     
+  border-radius: 55px;             
 }
 
 .search,
@@ -113,9 +111,9 @@ a {
 }
 
 .action {
-  display: grid;                    /* usa grid para centralizar ícone */
-  place-items: center;              /* centraliza horizontal e vertical */
-  position: relative;               /* permite posicionar badge dentro */
+  display: grid;                    
+  place-items: center;              
+  position: relative;              
 }
 
 .action:hover {
@@ -526,3 +524,4 @@ a {
   max-width: 480px; 
 
                     }                    /* largura máxima
+
