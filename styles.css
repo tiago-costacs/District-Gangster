@@ -420,109 +420,109 @@ a {
   width: 100%;                            /* ocupa toda largura */
   padding: 10px 12px;                     /* espaçamento interno */
   border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: 8px;                     /* cantos arredondados */
-  margin-top: 6px;                        /* espaço superior */
+  border-radius: 8px;                     
+  margin-top: 6px;                        
 }
 
 .row {
-  display: grid;                          /* layout em grid */
-  grid-template-columns: 1fr 1fr;         /* duas colunas iguais */
-  gap: 10px;                              /* espaçamento entre colunas */
+  display: grid;                          
+  grid-template-columns: 1fr 1fr;         
+  gap: 10px;                              
 }
 
 .payment-options {
-  display: flex;                          /* layout flex horizontal */
-  gap: 8px;                               /* espaçamento entre opções */
-  flex-wrap: wrap;                        /* quebra linha se necessário */
-  margin: 8px 0 12px;                     /* espaçamento externo */
+  display: flex;                          
+  gap: 8px;                               
+  flex-wrap: wrap;                        
+  margin: 8px 0 12px;                     
 }
 
 .chip {
-  display: inline-flex;                   /* layout horizontal inline */
-  align-items: center;                    /* centraliza verticalmente */
-  gap: 8px;                               /* espaçamento interno */
-  padding: 8px 12px;                      /* respiro interno */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: 999px;                   /* formato pill */
+  display: inline-flex;                   
+  align-items: center;                    
+  gap: 8px;                               
+  padding: 8px 12px;                      
+  border: 1px solid var(--line);          
+  border-radius: 999px;                   
 }
 
 /* ===== Footer ===== */
 .site-footer {
-  border-top: 1px solid var(--line);      /* linha superior */
-  background: var(--surface-2);           /* fundo preto secundário */
+  border-top: 1px solid var(--line);      
+  background: var(--surface-2);           
 }
 
 .footer-top {
-  display: grid;                          /* layout em grid */
-  grid-template-columns: repeat(3, minmax(0, 1fr)); /* três colunas iguais */
-  gap: 20px;                              /* espaçamento entre colunas */
-  padding: 20px 0;                        /* espaçamento vertical */
+  display: grid;                          
+  grid-template-columns: repeat(3, minmax(0, 1fr)); 
+  gap: 20px;                              
+  padding: 20px 0;                        
 }
 
 .footer-top h4 {
-  margin: 0 0 8px;                        /* espaço inferior */
+  margin: 0 0 8px;                        
 }
 
 .footer-top ul {
-  list-style: none;                       /* remove marcadores */
+  list-style: none;                       
   padding: 0;
   margin: 0;
-  display: grid;                          /* lista em grid vertical */
-  gap: 6px;                               /* espaçamento entre itens */
+  display: grid;                          
+  gap: 6px;                               
 }
 
 .newsletter {
-  display: flex;                          /* campo + botão lado a lado */
-  gap: 8px;                               /* espaçamento entre eles */
+  display: flex;                          
+  gap: 8px;                               
 }
 
 .newsletter input {
-  flex: 1;                                /* ocupa todo espaço disponível */
-  padding: 10px 12px;                     /* espaçamento interno */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: 8px;                     /* cantos arredondados */
+  flex: 1;                                
+  padding: 10px 12px;                     
+  border: 1px solid var(--line);          
+  border-radius: 8px;                     
 }
 
 .footer-bottom {
-  padding: 16px 0;                        /* espaçamento vertical */
-  text-align: center;                     /* centraliza texto */
-  color: var(--muted);                    /* texto cinza claro */
+  padding: 16px 0;                        
+  text-align: center;                     
+  color: var(--muted);                    
 }
 
 /* ===== Responsivo ===== */
 @media (max-width: 1024px) {
-  .grid-categories { grid-template-columns: repeat(3, 1fr); } /* reduz para 3 colunas */
-  .grid-products { grid-template-columns: repeat(2, 1fr); }   /* reduz para 2 colunas */
-  .cart { grid-template-columns: 1fr; }                       /* carrinho em uma coluna */
-  .cart-summary { position: static; }                         /* resumo deixa de ser sticky */
+  .grid-categories { grid-template-columns: repeat(3, 1fr); } 
+  .grid-products { grid-template-columns: repeat(2, 1fr); }   
+  .cart { grid-template-columns: 1fr; }                       
+  .cart-summary { position: static; }                         
 }
 
 @media (max-width: 640px) {
-  .nav-list { overflow-x: auto; gap: 12px; }                  /* menu rolável horizontal */
-  .hero-content { padding: 48px 0; }                          /* menos altura no hero */
-  .grid-categories { grid-template-columns: repeat(2, 1fr); } /* 2 colunas categorias */
-  .grid-products { grid-template-columns: 1fr; }              /* 1 coluna produtos */
-  .footer-top { grid-template-columns: 1fr; }                 /* rodapé em uma coluna */
-  .cart-item { grid-template-columns: 72px 1fr auto auto; }   /* miniatura menor */
-  .row { grid-template-columns: 1fr; }                        /* inputs empilhados */
-}
+  .nav-list { overflow-x: auto; gap: 12px; }                  
+  .hero-content { padding: 48px 0; }                          
+  .grid-categories { grid-template-columns: repeat(2, 1fr); } 
+  .grid-products { grid-template-columns: 1fr; }              
+  .footer-top { grid-template-columns: 1fr; }                 
+  .cart-item { grid-template-columns: 72px 1fr auto auto; }   
+  .row { grid-template-columns: 1fr; }                        
 
 /* ===== Hero Banner ===== */
 .hero-banner {
-  position: relative;                   /* permite overlay absoluto */
-  width: 100%;                          /* ocupa toda largura */
-  height: 950px;                        /* altura fixa */
-  overflow: hidden;                     /* corta excessos */
+  position: relative;                   
+  width: 100%;                          
+  height: 950px;                       
+  overflow: hidden;                     
 }
 
 .hero-img {
-  width: 100%;                          /* imagem ocupa toda largura */
+  width: 100%;                          
 }
 
 .hero-overlay {
-  position: absolute;                   /* sobreposição no banner */
+  position: absolute;                   
   top: 60%;                             /* posição vertical */
   left: 80%;                            /* posição horizontal */
   color: #ffffff;                       /* texto vermelho chamativo */
   max-width: 480px; 
+
                     }                    /* largura máxima
