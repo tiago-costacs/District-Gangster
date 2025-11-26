@@ -1,3 +1,515 @@
+:root {
+  --container: 1200px;
+  /* largura máxima do layout */
+  --radius: 12px;
+  /* raio padrão dos cards/botões */
+  --radius-sm: 12px;
+  /* raio menor */
+  --shadow: 0 8px 24px rgba(0, 0, 0, .7);
+  /* sombra padrão */
+
+  --surface: #000;
+  /* fundo principal escuro */
+  --surface-2: #0d0d0d;
+  /* fundo secundário (menos escuro) */
+  --text: #fff;
+  /* texto principal branco */
+  --muted: #d1d1d1;
+  /* texto fraco/cinza claro */
+  --line: #222;
+  /* bordas e divisores */
+
+  --brand: #e60023;
+  /* cor principal (vermelho) */
+  --brand-700: #c5001d;
+  /* variação mais escura */
+}
+
+
+/* =========================================================
+   BASE – resets e comportamentos globais
+========================================================= */
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  /* texto branco herdado */
+  background: var(--surface);
+  /* fundo preto */
+  line-height: 1.9;
+  /* legibilidade */
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  /* torna a imagem responsiva */
+  height: auto;
+}
+
+a {
+  color: inherit;
+  /* links herdam cor do texto */
+  text-decoration: none;
+  /* remove sublinhado */
+}
+
+/* container centralizado */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+/* =========================================================
+   HEADER – topo fixo com busca e ícones
+========================================================= */
+.site-header {
+  position: sticky;
+  /* header gruda no topo */
+  top: 0;
+  z-index: 50;
+  /* fica por cima do resto */
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-bar {
+  display: flex;
+  /* layout horizontal */
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+}
+
+/* foto/logo redonda */
+.brand-logo {
+  width: 90px;
+  height: 90px;
+  border-radius: 55px;
+}
+
+/* grupos: (busca) e (ações) */
+.search,
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* estilo padrão aplicado em inputs/botões */
+.search input,
+.search button,
+.action,
+.qty input,
+.qty-btn,
+.checkout input,
+.newsletter input {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface-2);
+  color: var(--text);
+}
+
+/* campo da busca */
+.search input {
+  width: clamp(160px, 24vw, 480px);
+  /* responsivo */
+  padding: 10px 12px;
+  border-radius: 999px;
+  /* formato pill */
+}
+
+.search input::placeholder {
+  color: var(--muted);
+}
+
+/* botões do header */
+.search button,
+.action {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  /* circulares */
+  cursor: pointer;
+}
+
+/* ícones do topo */
+.action {
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.action:hover {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* bolinha de notificação */
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  font-size: 20px;
+  background: var(--brand);
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   MENU – navegação horizontal
+========================================================= */
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  padding: 20px 10px;
+  border-radius: 8px;
+  color: #ffffff;
+}
+
+.nav-list a:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+
+/* =========================================================
+   HERO – banner de apresentação
+========================================================= */
+.hero {
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.hero-content {
+  text-align: center;
+  padding: 64px 0;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 44px);
+  margin: 0 0 8px;
+}
+
+.hero p {
+  color: var(--muted);
+  max-width: 640px;
+  margin: 0 auto 18px;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+
+/* =========================================================
+   BOTÕES – estilos reutilizáveis
+========================================================= */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 8px;
+  transition: .2s;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  /* “flutua” no hover */
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #fff;
+  border: 1px solid var(--brand);
+}
+
+.btn-primary:hover {
+  background: var(--brand-700);
+}
+
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: var(--brand);
+}
+
+.btn-ghost {
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+
+/* =========================================================
+   SEÇÕES GERAIS
+========================================================= */
+.section {
+  padding: 28px 0;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 22px;
+}
+
+.link {
+  color: var(--brand);
+}
+
+
+/* =========================================================
+   GRIDS – layouts padrão
+========================================================= */
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+/* categorias do menu */
+.grid-categories {
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* cards do catálogo */
+.grid-products {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+/* =========================================================
+   CARDS – produtos e conteúdos
+========================================================= */
+.card {
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: .2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.card-title {
+  color: #fff;
+}
+
+.card-sub {
+  color: var(--muted);
+}
+
+.card-price {
+  color: var(--brand);
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+
+/* =========================================================
+   CARRINHO DE COMPRAS
+========================================================= */
+.cart {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  /* lista / resumo */
+  gap: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* item individual */
+.cart-item {
+  display: grid;
+  grid-template-columns: 96px 1fr auto auto;
+  align-items: center;
+  gap: 10px;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+}
+
+/* infos */
+.item-info h3 {
+  margin: 0 0 4px;
+  font-size: 16px;
+}
+
+.item-info p {
+  margin: 0 0 8px;
+  color: var(--muted);
+}
+
+/* controle de quantidade */
+.qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty input {
+  width: 56px;
+  padding: 8px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--surface-2);
+  cursor: pointer;
+}
+
+.item-total strong {
+  color: var(--text);
+}
+
+.remove {
+  border: none;
+  background: transparent;
+  color: var(--brand);
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+/* resumo */
+.cart-summary {
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  position: sticky;
+  top: 84px;
+  height: fit-content;
+}
+
+.summary-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.summary-total dt,
+.summary-total dd {
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   CHECKOUT – formulário de pagamento
+========================================================= */
+.checkout input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.payment-options {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 8px 0 12px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   FOOTER – rodapé
+========================================================= */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--surface-2);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.footer-top ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.newsletter {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px 12px;
+}
+
+.footer-bottom {
+  padding: 16px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
 
 /* =========================================================
    RESPONSIVIDADE – ajustes para telas menores
