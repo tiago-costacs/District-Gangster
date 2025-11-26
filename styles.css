@@ -1,525 +1,75 @@
 
-:root {
-  container: 1200px;             
-  radius: 12px;                  
-  radius-sm: 12px;                 
-  shadow: 0 8px 24px rgba(0,0,0,.7); 
-
-  surface: #000;                  
-  surface-2: #0d0d0d;             
-  text: #fff;                     
-  muted: #d1d1d1;                 
-  line: #222;                     
-
-  brand: #e60023;                 
-  brand-700: #c5001d;             
-}
-
-/* ==========================
-   Base
-========================== */
-body {
-  margin: 0;                       
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; 
-  color: var(--text);              
-  background: var(--surface);         
-  line-height: 1.9;                
-}
-
-img {
-  display: block;                   
-  max-width: 100%;                  
-  height: auto;                     
-}
-
-a {
-  color: inherit;                   
-  text-decoration: none;            
-}
-
-.container {
-  max-width: var(--container);      
-  margin: 0 auto;                   
-  padding: 0 20px;                  
-
-/* ==========================
-   Header
-========================== */
-.site-header {
-  position: sticky;                 
-  top: 0;
-  z-index: 50;                      
-  background: var(--surface);       
-  border-bottom: 1px solid var(--line); 
-}
-
-.header-bar {
-  display: flex;                    
-  align-items: center;              
-  justify-content: space-between;   
-  gap: 16px;                        
-  padding: 18px 0;                  
-}
-
-.brand-logo {
-  width: 90px;                      
-  height: 90px;                     
-  border-radius: 55px;             
-}
-
-.search,
-.header-actions {
-  display: flex;                    /* layout flex */
-  align-items: center;              /* centraliza verticalmente */
-  gap: 20px;                         /* espaçamento entre itens */
-}
-
-/* inputs gerais */
-.search input,
-.search button,
-.action,
-.qty input,
-.qty-btn,
-.checkout input,
-.newsletter input {
-  border: 1px solid var(--line);    /* borda cinza escura */
-  border-radius: 8px;               /* cantos arredondados */
-  background: var(--surface-2);     /* fundo preto secundário */
-  color: var(--text);               /* texto branco */
-}
-
-/* campo de busca */
-.search input {
-  width: clamp(160px, 24vw, 480px); /* largura responsiva */
-  padding: 10px 12px;               /* espaçamento interno */
-  border-radius: 999px;             /* formato pill (oval) */
-}
-
-.search input::placeholder {
-  color: var(--muted);              /* placeholder em cinza claro */
-}
-
-/* botão da busca + ícones */
-.search button,
-.action {
-  width: 40px;                      /* largura fixa */
-  height: 40px;                     /* altura fixa */
-  border-radius: 999px;             /* formato circular */
-  cursor: pointer;                  /* cursor de clique */
-}
-
-.action {
-  display: grid;                    
-  place-items: center;              
-  position: relative;              
-}
-
-.action:hover {
-  background: var(--brand);         /* fundo vermelho ao hover */
-  color: #fff;                      /* ícone branco */
-}
-
-.badge {
-  position: absolute;               /* posiciona sobre o ícone */
-  top: -6px;                        /* desloca para cima */
-  right: -6px;                      /* desloca para direita */
-  font-size: 20px;                  /* texto pequeno */
-  background: var(--brand);         /* fundo vermelho */
-  color: #fff;                      /* texto branco */
-  padding: 2px 6px;                 /* espaçamento interno */
-  border-radius: 999px;             /* formato pill */
-}
-
-/* menu */
-.nav-list {
-  list-style: none;                 /* remove marcadores */
-  display: flex;                    /* itens em linha */
-  justify-content: center;          /* centraliza menu */
-  gap: 18px;                        /* espaçamento entre links */
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
-  padding: 20px 10px;                /* área clicável maior */
-  border-radius: 8px;               /* cantos arredondados */
-  color:#ffffff              /* cor cinza claro */
-}
-
-.nav-list a:hover {
-  color: var(--text);               /* texto branco ao hover */
-  background: var(--surface-2);     /* fundo preto secundário */
-}
-
-/* ==========================
-   Hero
-========================== */
-.hero {
-  background: var(--surface);       /* fundo preto */
-  border-bottom: 1px solid var(--line); /* linha inferior */
-}
-
-.hero-content {
-  text-align: center;               /* centraliza textos */
-  padding: 64px 0;                  /* espaçamento vertical */
-}
-
-.hero h1 {
-  font-size: clamp(28px, 4vw, 44px);/* tamanho responsivo */
-  margin: 0 0 8px;                  /* espaço inferior */
-}
-
-.hero p {
-  color: var(--muted);              /* texto cinza claro */
-  max-width: 640px;                 /* largura máxima */
-  margin: 0 auto 18px;              /* centraliza e espaça abaixo */
-}
-
-.hero-actions {
-  display: flex;                    /* botões lado a lado */
-  justify-content: center;          /* centraliza */
-  gap: 18px;                        /* espaçamento entre botões */
-}
-
-/* ==========================
-   Botões
-========================== */
-.btn {
-  display: inline-block;            /* permite padding/margin */
-  font-weight: 600;                 /* texto mais forte */
-  padding: 12px 18px;               /* área clicável */
-  border-radius: 8px;               /* cantos arredondados */
-  transition: .2s;                  /* animação suave */
-}
-
-.btn:hover {
-  transform: translateY(-1px);      /* efeito flutuar */
-}
-
-.btn-primary {
-  background: var(--brand);         /* fundo vermelho */
-  color: #fff;                      /* texto branco */
-  border: 1px solid var(--brand);   /* borda vermelha */
-}
-
-.btn-primary:hover {
-  background: var(--brand-700);     /* vermelho mais escuro */
-}
-
-.btn-outline {
-  border: 1px solid #fff;           /* borda branca */
-  color: #fff;                      /* texto branco */
-  background: transparent;          /* fundo transparente */
-}
-
-.btn-outline:hover {
-  background: #fff;                 /* fundo branco */
-  color: var(--brand);              /* texto vermelho */
-}
-
-.btn-ghost {
-  border: 1px solid var(--line);    /* borda cinza escura */
-  background: var(--surface);       /* fundo preto */
-}
-
-
-
-/* ==========================
-   Seções e Títulos
-========================== */
-.section {
-  padding: 28px 0;                  /* espaçamento vertical */
-}
-
-.section-header {
-  display: flex;                    /* layout flex */
-  align-items: center;              /* centraliza verticalmente */
-  justify-content: space-between;   /* título à esquerda, link à direita */
-  margin-bottom: 12px;              /* espaço abaixo */
-}
-
-.section-header h2 {
-  font-size: 22px;                  /* tamanho do título */
-}
-
-.link {
-  color: var(--brand);              /* link vermelho */
-}
-
-/* ==========================
-   Grids
-========================== */
-.grid {
-  display: grid;                    /* ativa grid layout */
-  gap: 18px;                        /* espaçamento entre itens */
-}
-
-.grid-categories {
-  grid-template-columns: repeat(6, 1fr); /* 4 colunas iguais */
-}
-
-.grid-products {
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-}
-
-/* ==========================
-   Cards (continuação)
-========================== */
-.card {
-  background: var(--surface-2);     /* fundo preto secundário */
-  border: 1px solid var(--line);    /* borda cinza escura */
-  border-radius: var(--radius);     /* cantos arredondados */
-  overflow: hidden;                 /* corta conteúdo que ultrapassa */
-  transition: .2s;                  /* animação suave em hover */
-}
-
-.card:hover {
-  transform: translateY(-2px);      /* sobe 2px ao passar o mouse */
-  box-shadow: var(--shadow);        /* aplica sombra */
-}
-
-.card-title {
-  color: #fff;                      /* título branco */
-}
-
-.card-sub {
-  color: var(--muted);              /* subtítulo cinza claro */
-}
-
-.card-price {
-  color: var(--brand);              /* preço vermelho */
-}
-
-.card-actions {
-  display: flex;                    /* botões lado a lado */
-  gap: 8px;                         /* espaçamento entre botões */
-}
-
-/* ===== Carrinho ===== */
-.cart {
-  display: grid;                          /* usa grid layout */
-  grid-template-columns: 1fr 360px;       /* duas colunas: conteúdo flexível + resumo fixo */
-  gap: 20px;                              /* espaçamento entre colunas */
-}
-
-.cart-items {
-  display: flex;                          /* lista vertical */
-  flex-direction: column;                 /* empilha itens */
-  gap: 12px;                              /* espaçamento entre itens */
-}
-
-.cart-item {
-  display: grid;                          /* layout em grid para cada item */
-  grid-template-columns: 96px 1fr auto auto; /* imagem + info + quantidade + total/remover */
-  align-items: center;                    /* centraliza verticalmente */
-  gap: 10px;                              /* espaçamento interno */
-  background: #000000;                    /* fundo preto */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: var(--radius);           /* cantos arredondados */
-  padding: 12px;                          /* espaçamento interno */
-}
-
-.cart-item img {
-  width: 100px;                            /* largura da miniatura */
-  height: 100px;                           /* altura da miniatura */
-  object-fit: cover;                      /* cobre área sem distorcer */
-  border-radius: var(--radius-sm);        /* cantos arredondados menores */
-}
-
-.item-info h3 {
-  margin: 0 0 4px;                        /* espaço inferior */
-  font-size: 16px;                        /* tamanho do título */
-}
-
-.item-info p {
-  margin: 0 0 8px;                        /* espaço inferior */
-  color: var(--muted);                    /* texto cinza claro */
-}
-
-.qty {
-  display: inline-flex;                   /* layout horizontal inline */
-  align-items: center;                    /* centraliza verticalmente */
-  gap: 8px;                               /* espaçamento entre botões/input */
-}
-
-.qty input {
-  width: 56px;                            /* largura do campo quantidade */
-  padding: 8px;                           /* espaçamento interno */
-  text-align: center;                     /* texto centralizado */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: 8px;                     /* cantos arredondados */
-}
-
-.qty-btn {
-  width: 32px;                            /* largura do botão +/- */
-  height: 32px;                           /* altura do botão */
-  border-radius: 8px;                     /* cantos arredondados */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  background: var(--surface-2);           /* fundo preto secundário */
-  cursor: pointer;                        /* cursor de clique */
-}
-
-.item-total strong {
-  color: var(--text);                     /* total em branco */
-}
-
-.remove {
-  border: none;                           /* sem borda */
-  background: transparent;                /* fundo transparente */
-  color: var(--brand);                    /* texto vermelho */
-  cursor: pointer;                        /* cursor de clique */
-  padding: 8px 12px;                      /* área clicável */
-}
-
-.cart-summary {
-  background: #000000;                    /* fundo preto */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: var(--radius);           /* cantos arredondados */
-  padding: 16px;                          /* espaçamento interno */
-  position: sticky;                       /* fixa ao rolar */
-  top: 84px;                              /* distância do topo */
-  height: fit-content;                    /* altura ajustada ao conteúdo */
-}
-
-.cart-summary h2 {
-  margin: 0 0 8px;                        /* espaço inferior */
-}
-
-.summary-list {
-  margin: 0;                              /* remove margens padrão */
-}
-
-.summary-list div {
-  display: flex;                          /* layout horizontal */
-  align-items: center;                    /* centraliza verticalmente */
-  justify-content: space-between;         /* label à esquerda, valor à direita */
-  padding: 6px 0;                         /* espaçamento vertical */
-}
-
-.summary-total dt,
-.summary-total dd {
-  font-weight: 700;                       /* destaque em negrito */
-}
-
-.checkout h3 {
-  margin: 12px 0 8px;                     /* espaçamento ao redor do subtítulo */
-}
-
-.checkout label {
-  display: block;                         /* ocupa linha inteira */
-  font-size: 14px;                        /* tamanho menor */
-  color: var(--muted);                    /* texto cinza claro */
-  margin-bottom: 8px;                     /* espaço abaixo */
-}
-
-.checkout input {
-  width: 100%;                            /* ocupa toda largura */
-  padding: 10px 12px;                     /* espaçamento interno */
-  border: 1px solid var(--line);          /* borda cinza escura */
-  border-radius: 8px;                     
-  margin-top: 6px;                        
-}
-
-.row {
-  display: grid;                          
-  grid-template-columns: 1fr 1fr;         
-  gap: 10px;                              
-}
-
-.payment-options {
-  display: flex;                          
-  gap: 8px;                               
-  flex-wrap: wrap;                        
-  margin: 8px 0 12px;                     
-}
-
-.chip {
-  display: inline-flex;                   
-  align-items: center;                    
-  gap: 8px;                               
-  padding: 8px 12px;                      
-  border: 1px solid var(--line);          
-  border-radius: 999px;                   
-}
-
-/* ===== Footer ===== */
-.site-footer {
-  border-top: 1px solid var(--line);      
-  background: var(--surface-2);           
-}
-
-.footer-top {
-  display: grid;                          
-  grid-template-columns: repeat(3, minmax(0, 1fr)); 
-  gap: 20px;                              
-  padding: 20px 0;                        
-}
-
-.footer-top h4 {
-  margin: 0 0 8px;                        
-}
-
-.footer-top ul {
-  list-style: none;                       
-  padding: 0;
-  margin: 0;
-  display: grid;                          
-  gap: 6px;                               
-}
-
-.newsletter {
-  display: flex;                          
-  gap: 8px;                               
-}
-
-.newsletter input {
-  flex: 1;                                
-  padding: 10px 12px;                     
-  border: 1px solid var(--line);          
-  border-radius: 8px;                     
-}
-
-.footer-bottom {
-  padding: 16px 0;                        
-  text-align: center;                     
-  color: var(--muted);                    
-}
-
-/* ===== Responsivo ===== */
+/* =========================================================
+   RESPONSIVIDADE – ajustes para telas menores
+========================================================= */
 @media (max-width: 1024px) {
-  .grid-categories { grid-template-columns: repeat(3, 1fr); } 
-  .grid-products { grid-template-columns: repeat(2, 1fr); }   
-  .cart { grid-template-columns: 1fr; }                       
-  .cart-summary { position: static; }                         
+  .grid-categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cart {
+    grid-template-columns: 1fr;
+    /* remove a coluna fixa */
+  }
+
+  .cart-summary {
+    position: static;
+    /* remove “sticky” */
+  }
 }
 
 @media (max-width: 640px) {
-  .nav-list { overflow-x: auto; gap: 12px; }                  
-  .hero-content { padding: 48px 0; }                          
-  .grid-categories { grid-template-columns: repeat(2, 1fr); } 
-  .grid-products { grid-template-columns: 1fr; }              
-  .footer-top { grid-template-columns: 1fr; }                 
-  .cart-item { grid-template-columns: 72px 1fr auto auto; }   
-  .row { grid-template-columns: 1fr; }                        
+  .nav-list {
+    overflow-x: auto;
+    /* menu rolagem horizontal */
+    gap: 12px;
+  }
 
-/* ===== Hero Banner ===== */
-.hero-banner {
-  position: relative;                   
-  width: 100%;                          
-  height: 950px;                       
-  overflow: hidden;                     
+  .hero-content {
+    padding: 48px 0;
+  }
+
+  .grid-categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-products {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-item {
+    grid-template-columns: 72px 1fr auto auto;
+  }
+
+  .row {
+    grid-template-columns: 1fr;
+  }
+
+  /* hero banner mobile */
+  .hero-banner {
+    position: relative;
+    width: 100%;
+    height: 950px;
+    overflow: hidden;
+  }
+
+  .hero-img {
+    width: 100%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 60%;
+    left: 80%;
+    color: #ffffff;
+    max-width: 480px;
+  }
 }
-
-.hero-img {
-  width: 100%;                          
-}
-
-.hero-overlay {
-  position: absolute;                   
-  top: 60%;                             /* posição vertical */
-  left: 80%;                            /* posição horizontal */
-  color: #ffffff;                       /* texto vermelho chamativo */
-  max-width: 480px; 
-
-                    }                    /* largura máxima
-
